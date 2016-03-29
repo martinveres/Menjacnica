@@ -38,5 +38,18 @@ public class Valuta {
 			throw new Exception("Kurs ne moze biti null vrednost!");
 		}
 	}
+	@Override
+	public String toString() {
+		return getNaziv() + getSkracenica() + " Srednji kurs: " + kurs[1];
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Valuta) {
+			if(((Valuta) obj).getNaziv().equals(getNaziv())) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 }
