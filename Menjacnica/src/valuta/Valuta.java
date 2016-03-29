@@ -17,23 +17,11 @@ public class Valuta {
 	public void setSkracenica(String skracenica) {
 		this.skracenica = skracenica;
 	}
+	public double[] getKurs() {
+		return kurs;
+	}
+	public void setKurs(double[] kurs) {
+		this.kurs = kurs;
+	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		if(obj instanceof Valuta) {
-			if(((Valuta) obj).getNaziv().equals(this.getNaziv())) {
-				return true;
-			}
-		}
-		return false;
-	}
-	@Override
-	public String toString() {
-		return getNaziv() + " " + getSkracenica() + " PR: " + kurs[0] + " SR: " + kurs[1] + " KUP: " + kurs[2];
-	}
-	@Override
-	public int hashCode() {
-		return 0;
-		
-	}
 }
