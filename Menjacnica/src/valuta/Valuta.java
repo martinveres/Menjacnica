@@ -8,20 +8,35 @@ public class Valuta {
 	public String getNaziv() {
 		return naziv;
 	}
-	public void setNaziv(String naziv) {
+	public void setNaziv(String naziv) throws Exception {
+		if(naziv!=null) {
 		this.naziv = naziv;
+		}
+		else {
+			throw new Exception("Naziv ne moze biti null vrednost.");
+		}
 	}
 	public String getSkracenica() {
 		return skracenica;
 	}
-	public void setSkracenica(String skracenica) {
-		this.skracenica = skracenica;
+	public void setSkracenica(String skracenica) throws Exception {
+		if(skracenica!=null) {
+			this.skracenica = skracenica;
+		}
+		else {
+			throw new Exception("Greska. Skracenica ne moze biti null vrednost. ");
+		}
 	}
 	public double[] getKurs() {
 		return kurs;
 	}
-	public void setKurs(double[] kurs) {
-		this.kurs = kurs;
+	public void setKurs(double[] kurs) throws Exception {
+		if(kurs!=null) {
+			this.kurs = kurs;
+		}
+		else {
+			throw new Exception("Kurs ne moze biti null vrednost!");
+		}
 	}
 	
 }
